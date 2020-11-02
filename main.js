@@ -24,24 +24,11 @@ const countBs = function (numbers) {
   }
   return countB;
 };
-/*
-const lastIndexOfPunctuation = function(str) {
-  let results = 0;
-  for(let i = 0; i < str.length; i++){
-    if (str[i] === '.' ){
-      results++;
-    } else if (str[i] === '?') {
-      results++;
-    } else if (str[i] === '!') {
-      results++;
-    } else {
-      result += '-1';
-    }
-    
-  }
-  return results;
-  };
-*/
+
+const lastIndexOfPunctuation = function(str) { 
+  return str.lastIndexOf('.');
+};
+
 const deleteMiddleLetters = function (str) {
   let middle = '';
   const mid = str.length % 2;
@@ -57,7 +44,7 @@ const deleteMiddleLetters = function (str) {
 
 const getCenturies = function(arrays) {
   const centuries = arrays.map(function(array) {
-  
+    
     return array.toString().slice(0,2) + 'th';
   });
   return centuries;
